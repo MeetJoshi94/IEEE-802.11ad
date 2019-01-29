@@ -1,6 +1,11 @@
 /*
- * Copyright (c) 2015, 2016 IMDEA Networks Institute
- * Author: Hany Assasa <hany.assasa@gmail.com>
+ns3 simulations of IEEE 802.11ad
+hdrelaybuilding.cc : 
+Modified version of the code 'evaluate_halfduplex_relay_tcp.cc' by Hany Assasa.  
+Instead of FrissPropagationLossModel, OhBuildingsPropagationLossModel is used.
+Flow monitor tool is also added to the code.
+To use OhBuildingsPropagationLossModel nodes need to have positive z coordinates. 
+It will give some error if nodes are placed on the dimension like(x,y,0).
  */
 #include "ns3/applications-module.h"
 #include "ns3/core-module.h"
@@ -56,7 +61,7 @@
  * or disable relay switching per SP allocation.
  *
  * Running Simulation:
- * ./waf --run "evaluate_halfduplex_relay_tcp --simulationTime=10 --pcap=true"
+ * ./waf --run "hdrelaybuilding --simulationTime=10 --pcap=true"
  *
  * Output:
  * The simulation generates the following traces:
