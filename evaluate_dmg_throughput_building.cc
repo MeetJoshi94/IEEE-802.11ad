@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2015, 2016 IMDEA Networks Institute
- * Author: Hany Assasa <hany.assasa@gmail.com>
- */
 #include "ns3/applications-module.h"
 #include "ns3/core-module.h"
 #include "ns3/internet-module.h"
@@ -24,6 +20,10 @@
  *
  * The script will print the achieved throughput in Mbps for each MCS starting from MCS1-MCS24.
  * Each DMG STA supports two level of aggregation (A-MSDU + A-MPDU).
+ 
+ * You can mention number of rooms, floors and internall wall loss in argument by following command:
+ *./waf --run "scratch/evaluate_dmg_throughput_building  --nfloors = 3 --nromsx=3 --nroomsy=2 --InternalWallLoss=10.0" 
+
  */
 
 NS_LOG_COMPONENT_DEFINE ("EvaluateDmgThroughput");
